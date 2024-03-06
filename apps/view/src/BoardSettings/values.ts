@@ -16,7 +16,7 @@ import {
 } from './types'
 
 export const MASK_ALPHA = 'bf'
-export const GAP_FILL_DEFAULT = 0.00011
+export const GAP_FILL_DEFAULT = 0.011
 
 export function valuesToBoardUpdate(values: Values, log: Logger): BoardUpdate {
   let outlineGapFill =

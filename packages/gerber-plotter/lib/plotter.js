@@ -10,7 +10,7 @@ var padShape = require('./_pad-shape')
 var operate = require('./_operate')
 var boundingBox = require('./_box')
 
-var MAX_GAP = 0.00011
+var MAX_GAP = 0.011
 
 var isFormatKey = function(key) {
   return (

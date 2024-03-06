@@ -221,8 +221,8 @@ function stackupToBoardName(stackup: Stackup): string {
 
 function stackupToBoardOptions(stackup: Stackup): Board['options'] {
   return {
-    useOutline: stackup.useOutline,
-    outlineGapFill: stackup.outlineGapFill || 0.00011,
+    useOutline: true,
+    outlineGapFill: stackup.outlineGapFill || 0.011,
     color: stackup.color,
   }
 }
