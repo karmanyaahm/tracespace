@@ -82,7 +82,7 @@ export default function reducer(state: State, action: Action): State {
         ...state,
         board,
         layerVisibility,
-        mode: mode || 'top',
+        mode: mode || 'layers',
         loading: false,
         updating: false,
       }
