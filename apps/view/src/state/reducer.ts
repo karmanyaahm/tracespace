@@ -1,6 +1,11 @@
+import {
+  Mode,
+  Modes,
+} from '../types'
+import {Action, State} from './types'
+
 import * as actionTypes from './actions'
 import {INITIAL_STATE} from './context'
-import {Action, State} from './types'
 
 export default function reducer(state: State, action: Action): State {
   switch (action.type) {
@@ -77,12 +82,18 @@ export default function reducer(state: State, action: Action): State {
           [ly.id]: prevVisibility != null ? prevVisibility : true,
         }
       }, {})
+          const query = new URLSearchParams(window.location.search.slice(1))
+          var modebackup = query.get('mode')
+	  console.log(modebackup + " modes  " + Modes);
+	  if (!Modes.includes(modebackup)) 
+		  modebackup = 'top';
+	  
 
       return {
         ...state,
         board,
         layerVisibility,
-        mode: mode || 'layers',
+        mode: mode || modebackup as Mode,
         loading: false,
         updating: false,
       }
