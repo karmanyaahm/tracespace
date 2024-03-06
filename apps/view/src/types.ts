@@ -13,7 +13,7 @@ export type AppPreferences = Optional<{
 }>
 
 export type Mode = null | 'top' | 'bottom' | 'layers'
-export const Modes: (string | null)[] = ["top", "bottom", "layers", null];
+export const Modes: string[] = ["top", "bottom", "layers"];
 
 export type SvgSource = string | null
 
