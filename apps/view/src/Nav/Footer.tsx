@@ -16,7 +16,17 @@ export default function Footer(): JSX.Element {
   return (
     <footer className={STYLE}>
       <p className={COPY_STYLE}>
-        {'© 2015 - 2019 by '}
+        {'This fork is by '}
+        <a href="https://karmanyaah.malhotra.cc" className={LINK_STYLE}>
+          {'Karmanyaah Malhotra'}
+        </a>
+  {' | '}
+        <a href="https://github.com/karmanyaahm/tracespace/tree/main" className={LINK_STYLE}>
+          view current source
+        </a>
+</p>
+      <p className={COPY_STYLE}>
+        {'Originally: © 2015 - 2019 by '}
         <a href={AUTHOR_URL} className={LINK_STYLE}>
           {AUTHOR_NAME.toLowerCase()}
         </a>{' '}
@@ -31,7 +41,7 @@ export default function Footer(): JSX.Element {
         </a>
         {' | '}
         <a href={REPO_URL} className={LINK_STYLE}>
-          view source
+          view original source
         </a>
       </p>
     </footer>
